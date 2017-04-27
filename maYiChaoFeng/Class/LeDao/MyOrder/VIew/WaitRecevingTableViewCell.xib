@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="206" id="KGk-i7-Jjw" customClass="WaitRecevingTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="206"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="205"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="等待买家收货" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pni-fJ-vep">
+                        <rect key="frame" x="193" y="18" width="104" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="nLO-9H-hr0"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="快递：京东快递" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBD-AE-7U6">
+                        <rect key="frame" x="23" y="176.5" width="108" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="g5Q-Mh-7mU"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="订单号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u99-DG-JZy">
+                        <rect key="frame" x="141" y="176.5" width="46" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Asw-Mk-SLC"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8q-pi-MeY">
+                        <rect key="frame" x="255" y="176" width="50" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="FMr-h8-fWc"/>
+                            <constraint firstAttribute="width" constant="50" id="raZ-ih-rKr"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="确认收货">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="confirmActoin:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="NH5-NP-aQi"/>
+                        </connections>
+                    </button>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3dU-Lg-m9o">
+                        <rect key="frame" x="8" y="39" width="304" height="137"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </tableView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="eBD-AE-7U6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="DD4-fY-vS5"/>
+                    <constraint firstItem="G8q-pi-MeY" firstAttribute="top" secondItem="3dU-Lg-m9o" secondAttribute="bottom" id="Eo1-QC-zxI"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="u99-DG-JZy" secondAttribute="bottom" id="Pmp-a7-hA6"/>
+                    <constraint firstItem="3dU-Lg-m9o" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Thn-8c-aPn"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="pni-fJ-vep" secondAttribute="trailing" constant="15" id="TnP-3C-tkA"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="3dU-Lg-m9o" secondAttribute="trailing" id="X0a-vE-1I0"/>
+                    <constraint firstItem="3dU-Lg-m9o" firstAttribute="top" secondItem="pni-fJ-vep" secondAttribute="bottom" id="cPq-lp-Erb"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="eBD-AE-7U6" secondAttribute="bottom" id="d3g-YR-4cs"/>
+                    <constraint firstAttribute="bottom" secondItem="G8q-pi-MeY" secondAttribute="bottom" constant="10" id="fOZ-1F-g3g"/>
+                    <constraint firstItem="u99-DG-JZy" firstAttribute="leading" secondItem="eBD-AE-7U6" secondAttribute="trailing" constant="10" id="hMU-az-YCx"/>
+                    <constraint firstAttribute="trailing" secondItem="G8q-pi-MeY" secondAttribute="trailing" constant="15" id="vab-2i-eL9"/>
+                    <constraint firstItem="pni-fJ-vep" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="vbQ-y9-RdV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="expressNameLable" destination="eBD-AE-7U6" id="hUa-1g-SFS"/>
+                <outlet property="expressNumLable" destination="u99-DG-JZy" id="1mr-7h-7JW"/>
+                <outlet property="tableView" destination="3dU-Lg-m9o" id="zuD-y9-4po"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="152"/>
+        </tableViewCell>
+    </objects>
+</document>

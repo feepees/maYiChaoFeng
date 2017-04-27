@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BindingWXViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="绑定微信" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RnN-a6-y8M">
+                    <rect key="frame" x="128.5" y="144" width="117.5" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="km7-D7-2dy"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                    <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="绑定的微信将成为你的提现账户" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvP-2c-cB0">
+                    <rect key="frame" x="66" y="211" width="243" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="jW8-hE-Uob"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wdqb_jt_icon" translatesAutoresizingMaskIntoConstraints="NO" id="plg-hn-GSo">
+                    <rect key="frame" x="169.5" y="304" width="36" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="36" id="EDM-JQ-F0H"/>
+                        <constraint firstAttribute="height" constant="44" id="Hav-BF-Tdp"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我们将通过微信红包的形式为你提现" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5q8-Eg-EHv">
+                    <rect key="frame" x="48" y="251" width="278" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="2mm-LP-RAU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoo-KB-tLx">
+                    <rect key="frame" x="125" y="383" width="125" height="44"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="125" id="CMy-d7-tCj"/>
+                        <constraint firstAttribute="height" constant="44" id="Qau-75-TgV"/>
+                    </constraints>
+                    <state key="normal" title="下一步">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="nextStep:" destination="-1" eventType="touchUpInside" id="ccr-WB-WjJ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="wvP-2c-cB0" firstAttribute="top" secondItem="RnN-a6-y8M" secondAttribute="bottom" constant="27" id="3cK-BJ-WHr"/>
+                <constraint firstItem="RnN-a6-y8M" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6eJ-A0-QN6"/>
+                <constraint firstItem="uoo-KB-tLx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="77x-SD-Uce"/>
+                <constraint firstItem="wvP-2c-cB0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8Iu-Qm-Opo"/>
+                <constraint firstItem="plg-hn-GSo" firstAttribute="top" secondItem="5q8-Eg-EHv" secondAttribute="bottom" constant="32" id="Lot-Mz-mD8"/>
+                <constraint firstItem="uoo-KB-tLx" firstAttribute="top" secondItem="plg-hn-GSo" secondAttribute="bottom" constant="35" id="S6h-n1-e6k"/>
+                <constraint firstItem="RnN-a6-y8M" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="144" id="cFU-AP-BYA"/>
+                <constraint firstItem="5q8-Eg-EHv" firstAttribute="top" secondItem="wvP-2c-cB0" secondAttribute="bottom" id="eXR-hI-Nji"/>
+                <constraint firstItem="plg-hn-GSo" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="zef-6O-xXN"/>
+                <constraint firstItem="5q8-Eg-EHv" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="zzZ-yi-eRP"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="87.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="wdqb_jt_icon" width="36" height="43"/>
+    </resources>
+</document>

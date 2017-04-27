@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="160" id="KGk-i7-Jjw" customClass="WaitDispatchTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="159"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="等待买家发货" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DmP-IX-BAq">
+                        <rect key="frame" x="193" y="13" width="104" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="rKC-lq-4Ie"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Cz-6t-sVI">
+                        <rect key="frame" x="235" y="138.5" width="62" height="23"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="62" id="Qdi-Ia-H8x"/>
+                            <constraint firstAttribute="height" constant="23" id="b5B-2F-QWg"/>
+                        </constraints>
+                        <state key="normal" title="订单详情">
+                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </state>
+                    </button>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YmY-rU-A5e">
+                        <rect key="frame" x="0.0" y="34" width="320" height="104.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </tableView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="YmY-rU-A5e" secondAttribute="trailing" id="RkT-cu-yL3"/>
+                    <constraint firstItem="YmY-rU-A5e" firstAttribute="top" secondItem="DmP-IX-BAq" secondAttribute="bottom" id="S7c-ku-8Qx"/>
+                    <constraint firstItem="DmP-IX-BAq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="T24-xF-9GB"/>
+                    <constraint firstItem="2Cz-6t-sVI" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" constant="10" id="cJm-DC-PCE"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="2Cz-6t-sVI" secondAttribute="trailing" constant="15" id="oXf-UJ-ogW"/>
+                    <constraint firstItem="YmY-rU-A5e" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="qCl-lE-NyX"/>
+                    <constraint firstItem="2Cz-6t-sVI" firstAttribute="top" secondItem="YmY-rU-A5e" secondAttribute="bottom" id="vqK-2N-e9n"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="DmP-IX-BAq" secondAttribute="trailing" constant="15" id="xHW-Gn-7sB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="tableView" destination="YmY-rU-A5e" id="eXE-ec-RsO"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="129"/>
+        </tableViewCell>
+    </objects>
+</document>

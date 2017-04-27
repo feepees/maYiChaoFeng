@@ -1,0 +1,95 @@
+//
+//  TeamViewController.m
+//  maYiChaoFeng
+//
+//  Created by Android on 2017/3/27.
+//  Copyright © 2017年 cc.youdu. All rights reserved.
+//
+
+#import "TeamViewController.h"
+#import "UserModel.h"
+#import "TeamMemberTableViewCell.h"
+#import "MenmberModel.h"
+@interface TeamViewController() <UITableViewDelegate,UITableViewDataSource>
+@property(nonatomic,strong)UITableView *tableView;
+@property(nonatomic,strong)NSMutableArray *dataSoure;
+@end
+
+@implementation TeamViewController
+-(UITableView *)tableView{
+    if (!_tableView) {
+        _tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+        [_tableView registerNib:[UINib nibWithNibName:@"TeamMemberTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"cellId"];
+        _tableView.delegate=self;
+        _tableView.dataSource=self;
+    }
+    return _tableView;
+}
+-(NSMutableArray *)dataSoure{
+    if (!_dataSoure) {
+        _dataSoure = [[NSMutableArray alloc]init];
+        
+    }
+    return _dataSoure;
+}
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.title=@"我的团队";
+    }
+    return self;
+}
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self.view addSubview:self.tableView];
+    [self getData];
+}
+
+
+-(void)getData{
+    
+    NSMutableDictionary *parameter=[NSMutableDictionary dictionary];
+    parameter[@"user_id"]=[UserModel sharedUserModel].user_id;
+    parameter[@"page"]=@"1";
+    parameter[@"page_size"]=@"20";
+    MYLog(@"团队信息API：%@参数：%@",Team,parameter);
+    [MJHttpTool Post:Team parameters:parameter success:^(id responseObject) {
+        MYLog(@"我的团队返回信息%@",responseObject);
+      self.dataSoure=  [MenmberModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
+        [self.tableView reloadData];
+    }failure:^(NSError *error) {
+        MYLog(@"我的团队返回错误%@",error);
+    }];
+}
+#pragma mark -----------UITableViewDelegate---------------\
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.dataSoure.count;
+    
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *cellId=@"cellId";
+    TeamMemberTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
+    cell.menmber=self.dataSoure[indexPath.item];
+    return cell;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 80;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 40;
+}
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIView *view=[[UIView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, 40)];
+    UILabel *lable=[[UILabel alloc]initWithFrame:CGRectMake(Pading, 10, 100, 20)];
+    lable.text=@"我的团队";
+    [view addSubview:lable];
+    
+    UILabel *lable1=[[UILabel alloc]initWithFrame:CGRectMake(screenWidth-100-Pading, 10, 100, 20)];
+    lable1.text=[NSString stringWithFormat:@"共%ld人",self.dataSoure.count];
+    [view addSubview:lable1];
+    return view;
+}
+
+@end

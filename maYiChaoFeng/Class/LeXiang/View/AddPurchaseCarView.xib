@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddPurchaseCarView"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AddPurchaseCarView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzL-Vw-mU9">
+                    <rect key="frame" x="0.0" y="0.0" width="65" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="65" id="GrZ-Fk-CC2"/>
+                    </constraints>
+                    <inset key="contentEdgeInsets" minX="20" minY="10" maxX="20" maxY="10"/>
+                    <state key="normal" backgroundImage="gwc_icon"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Arg-t9-AzC">
+                    <rect key="frame" x="65" y="0.0" width="155" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="加入购物车">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="addCarAction:" destination="-1" eventType="touchUpInside" id="dZP-Jm-IJB"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gm1-Ud-ZOG">
+                    <rect key="frame" x="220" y="0.0" width="155" height="50"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="立即购买">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="purchaseAction:" destination="-1" eventType="touchUpInside" id="sXy-Gw-o0z"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="gm1-Ud-ZOG" secondAttribute="bottom" id="2QW-am-yzu"/>
+                <constraint firstItem="Arg-t9-AzC" firstAttribute="leading" secondItem="mzL-Vw-mU9" secondAttribute="trailing" id="4vf-Xq-4g8"/>
+                <constraint firstItem="Arg-t9-AzC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="7xd-Cs-V8C"/>
+                <constraint firstAttribute="bottom" secondItem="Arg-t9-AzC" secondAttribute="bottom" id="8Ks-91-xnI"/>
+                <constraint firstItem="gm1-Ud-ZOG" firstAttribute="leading" secondItem="Arg-t9-AzC" secondAttribute="trailing" id="9UY-yI-yDe"/>
+                <constraint firstItem="mzL-Vw-mU9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="L1Y-je-icU"/>
+                <constraint firstItem="gm1-Ud-ZOG" firstAttribute="width" secondItem="Arg-t9-AzC" secondAttribute="width" id="Y1q-m8-T74"/>
+                <constraint firstAttribute="bottom" secondItem="mzL-Vw-mU9" secondAttribute="bottom" id="dO6-cI-uAS"/>
+                <constraint firstItem="gm1-Ud-ZOG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hRQ-dD-PXp"/>
+                <constraint firstAttribute="trailing" secondItem="gm1-Ud-ZOG" secondAttribute="trailing" id="rei-Z0-74C"/>
+                <constraint firstItem="mzL-Vw-mU9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="tn0-bS-haO"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-2" y="-116"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="gwc_icon" width="25" height="21"/>
+    </resources>
+</document>

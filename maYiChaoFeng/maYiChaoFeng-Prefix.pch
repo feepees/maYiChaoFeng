@@ -1,0 +1,31 @@
+//
+//  maYiChaoFeng-Prefix.pch
+//  maYiChaoFeng
+//
+//  Created by Android on 2017/2/14.
+//  Copyright © 2017年 cc.youdu. All rights reserved.
+//
+
+#ifndef maYiChaoFeng_Prefix_pch
+#define maYiChaoFeng_Prefix_pch
+
+#import "command.h"
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "MJHttpTool.h"
+
+#import "YJProgressHUD.h"
+
+#import "MJExtension.h"
+
+#import "HMSingleton.h"
+
+
+#import <UIImageView+AFNetworking.h>
+
+#import "UIView+XMGExtension.h"
+
+#import "UserDataTool.h"
+
+#import "UserModel.h"
+#endif /* maYiChaoFeng_Prefix_pch */

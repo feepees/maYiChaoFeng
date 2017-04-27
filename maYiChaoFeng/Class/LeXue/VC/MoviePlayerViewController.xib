@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MoviePlayerViewController">
+            <connections>
+                <outlet property="playerFatherView" destination="xdr-t4-Vh3" id="mtv-DT-27N"/>
+                <outlet property="tableView" destination="Sw7-Sd-4Ku" id="wQM-lo-9Vm"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xdr-t4-Vh3">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="209"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="209" id="ngr-T4-D9c"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sw7-Sd-4Ku">
+                    <rect key="frame" x="0.0" y="209" width="375" height="458"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="xdr-t4-Vh3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ERI-SL-Aby"/>
+                <constraint firstItem="xdr-t4-Vh3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Mv3-v6-3k9"/>
+                <constraint firstItem="Sw7-Sd-4Ku" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="WYU-5H-UWw"/>
+                <constraint firstAttribute="trailing" secondItem="xdr-t4-Vh3" secondAttribute="trailing" id="aLm-gH-wRC"/>
+                <constraint firstAttribute="bottom" secondItem="Sw7-Sd-4Ku" secondAttribute="bottom" id="dev-DK-HkQ"/>
+                <constraint firstItem="Sw7-Sd-4Ku" firstAttribute="top" secondItem="xdr-t4-Vh3" secondAttribute="bottom" id="hyg-AW-15L"/>
+                <constraint firstAttribute="trailing" secondItem="Sw7-Sd-4Ku" secondAttribute="trailing" id="k22-jI-ssd"/>
+            </constraints>
+            <point key="canvasLocation" x="-425.5" y="-172.5"/>
+        </view>
+    </objects>
+</document>

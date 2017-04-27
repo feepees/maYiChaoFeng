@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WaitPayTableViewCell"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="204" id="KGk-i7-Jjw" customClass="WaitPayTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="204"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="203"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Qq-v9-juU">
+                        <rect key="frame" x="23" y="18" width="12" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="12" id="Rny-7G-OIN"/>
+                            <constraint firstAttribute="height" constant="12" id="hoC-XS-LXh"/>
+                        </constraints>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <state key="normal" backgroundImage="shdz_normal"/>
+                        <state key="selected" backgroundImage="shdz_selected"/>
+                        <connections>
+                            <action selector="selectAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="bqp-X4-yCB"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="等待买家付款" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIe-sh-UFQ">
+                        <rect key="frame" x="211" y="18" width="86" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="R3X-mH-PwX"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZf-yc-ofP">
+                        <rect key="frame" x="155" y="170.5" width="70" height="23"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="23" id="GqR-fe-dwC"/>
+                            <constraint firstAttribute="width" constant="70" id="OXZ-fl-S6y"/>
+                        </constraints>
+                        <state key="normal" title="取消订单">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="cancelOrderAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="irp-hj-Znc"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbx-eV-kaE">
+                        <rect key="frame" x="235" y="170.5" width="70" height="23"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="23" id="aSN-kh-KVW"/>
+                            <constraint firstAttribute="width" constant="70" id="sXe-Rj-E4T"/>
+                        </constraints>
+                        <state key="normal" title="付款">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="payAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hhe-wY-6Bp"/>
+                        </connections>
+                    </button>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p2c-Z8-Szg">
+                        <rect key="frame" x="8" y="39" width="304" height="131.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </tableView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="oIe-sh-UFQ" secondAttribute="trailing" constant="15" id="8d8-cP-3NA"/>
+                    <constraint firstItem="p2c-Z8-Szg" firstAttribute="top" secondItem="oIe-sh-UFQ" secondAttribute="bottom" id="I2M-jV-RK0"/>
+                    <constraint firstItem="oIe-sh-UFQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="I5J-M4-41D"/>
+                    <constraint firstItem="p2c-Z8-Szg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Kmk-0o-bzJ"/>
+                    <constraint firstAttribute="bottom" secondItem="WZf-yc-ofP" secondAttribute="bottom" constant="10" id="T55-lG-5Lj"/>
+                    <constraint firstItem="3Qq-v9-juU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="VIP-qo-n3X"/>
+                    <constraint firstItem="nbx-eV-kaE" firstAttribute="top" secondItem="p2c-Z8-Szg" secondAttribute="bottom" id="d50-HB-OC1"/>
+                    <constraint firstAttribute="bottom" secondItem="nbx-eV-kaE" secondAttribute="bottom" constant="10" id="f5B-0D-GXi"/>
+                    <constraint firstAttribute="trailing" secondItem="nbx-eV-kaE" secondAttribute="trailing" constant="15" id="mZD-44-aYr"/>
+                    <constraint firstItem="3Qq-v9-juU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="p1i-au-0dh"/>
+                    <constraint firstItem="nbx-eV-kaE" firstAttribute="leading" secondItem="WZf-yc-ofP" secondAttribute="trailing" constant="10" id="rJt-k4-AM4"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="p2c-Z8-Szg" secondAttribute="trailing" id="ubQ-c3-ogA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="tableView" destination="p2c-Z8-Szg" id="tLb-7T-Ghb"/>
+            </connections>
+            <point key="canvasLocation" x="-96" y="64"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="shdz_normal" width="12" height="12"/>
+        <image name="shdz_selected" width="12" height="12"/>
+    </resources>
+</document>
