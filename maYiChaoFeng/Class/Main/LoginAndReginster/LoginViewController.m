@@ -94,7 +94,6 @@
 //第三方登陆
 - (void)getUserInfoForPlatform:(UMSocialPlatformType)platformType
 {
-    NSLog(@"hahahhah");
     [[UMSocialManager defaultManager] getUserInfoWithPlatform:platformType currentViewController:self completion:^(id result, NSError *error) {
         
         UMSocialUserInfoResponse *resp = result;
@@ -111,7 +110,6 @@
         NSLog(@" name: %@", resp.name);
         NSLog(@" iconurl: %@", resp.iconurl);
         NSLog(@" gender: %@", resp.gender);
-        NSLog(@"hahahha");
         // 第三方平台SDK原始数据
         MYPLog(@" originalResponse: %@", resp.originalResponse);
         
