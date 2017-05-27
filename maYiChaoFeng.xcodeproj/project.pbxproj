@@ -1747,7 +1747,7 @@
 					94F62BF71E52A72900C53A46 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = G7H56V4BMV;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					94F62C101E52A72B00C53A46 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -2202,6 +2202,7 @@
 			baseConfigurationReference = DFF1D1C2108B335AF1CF0E53 /* Pods-maYiChaoFeng.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = G7H56V4BMV;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "maYiChaoFeng/maYiChaoFeng-Prefix.pch";
@@ -2210,6 +2211,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.youdu.maYiChaoFeng;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9998cc27-b9ae-4a97-a213-438ffe698eae";
+				PROVISIONING_PROFILE_SPECIFIER = maYiChaoFeng_ADHOC_profile;
 			};
 			name = Debug;
 		};
@@ -2218,6 +2221,7 @@
 			baseConfigurationReference = 9FE34896A82A7CFB62C4CA0C /* Pods-maYiChaoFeng.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = G7H56V4BMV;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "maYiChaoFeng/maYiChaoFeng-Prefix.pch";
@@ -2226,6 +2230,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.youdu.maYiChaoFeng;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9998cc27-b9ae-4a97-a213-438ffe698eae";
+				PROVISIONING_PROFILE_SPECIFIER = maYiChaoFeng_ADHOC_profile;
 			};
 			name = Release;
 		};
